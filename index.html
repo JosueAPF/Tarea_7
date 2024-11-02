@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Productos</title>
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon-32x32.png">
 </head>
 <body>
     <h1>Catálogo de Productos</h1>
-
     <!-- ComboBox para seleccionar categoría -->
-    <label for="category-select">Seleccionar Categoría:</label>
+    <!--<label class="labelCategoria" for="category-select">Seleccionar Categoría:</label>--->
+    <div id="seccionProductos">
+    <label id="Info_label">Mas Sobre Catalogos CAT</label>
+    <label>Ingrese Una Categoria  </label>
     <select id="category-select">
         <option value="todos">Todos</option>
         <option value="ropa">Ropa</option>
@@ -19,31 +22,33 @@
         <option value="oficina">Oficina</option>
         <option value="cocina">Cocina</option>
     </select>
-
+    </div>
     <div id="product-list"></div>
-
+    <hr>
     <h2>Detalles de Compra</h2>
-    <label for="quantity">Descuento:</label>
-    <input type="text" id="quantity" placeholder="Ingrese algun descuento">
 
-    <h3>Método de Pago:</h3>
-    <input type="radio" id="credit" name="payment" value="Crédito">
-    <label for="credit">Crédito</label><br>
-    <input type="radio" id="debito" name="payment" value="Débito">
-    <label for="debito">Débito</label><br>
-    <input type="radio" id="efectivo" name="payment" value="Efectivo">
-    <label for="efectivo">Efectivo</label><br>
+    <h3>Calcular Descuento</h3>
+    <input type="radio" id="credit" name="Descuento" value="0.10">
+    <label for="credit">10%</label><br>
+    <input type="radio" id="debito" name="Descuento" value="0.20">
+    <label for="debito">20%</label><br>
+    <input type="radio" id="efectivo" name="Descuento" value="0.50">
+    <label for="efectivo">50%</label><br>
 
+    <div id="Contenedor-Botones">
     <button id="calculate-button">Calcular Total</button>
-    <p id="total-price">Total: $0</p>
+    <button id="Limpiar-button">Limpiar</button>
+    </div>
+    <p id="Total-noDescuento"></p>
+    <p id="total-price">Total: Q0</p>
 
+    <!---Modal despliega informacion tarjeta Productos -->
     <div id="product-details" class="hidden">
         <h2 id="detail-title"></h2>
         <img id="detail-image" src="" alt="Imagen del producto">
         <p id="detail-description"></p>
         <button id="close-details">Cerrar</button>
     </div>
-
     <script src="./src/app.js" type="module"></script>
 </body>
 </html>
