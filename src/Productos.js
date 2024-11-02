@@ -2,7 +2,7 @@ export const products = [
     {
         title: "Gorra",
         description: "es una simple Gorra",
-        image: "./img/Productos/gorra.jpg",
+        image: "./img/Productos/Gorra.jpg",
         price: 35,
         category: "ropa",
         cantidad: 0
